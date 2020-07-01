@@ -1,0 +1,24 @@
+<div class="jumbotron" style="padding: 20px; margin-top:30px;">
+    <h2 style="text-align: center;">Add New Task</h2>
+    <form [formGroup] = "registrationForm" (submit) = "f_Task(registrationForm.value)">     
+        <div class="form-group">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" placeholder="Task Title" formControlName="header" [class.is-invalid]="(registrationForm.get('header').invalid && registrationForm.get('header').touched)">
+            <div *ngIf="registrationForm.get('header').invalid && registrationForm.get('header').touched">
+                <small *ngIf="registrationForm.get('header').errors?.required" class="text-danger">Sorry, title is mandatory</small>
+                <small *ngIf="registrationForm.get('header').errors?.minlength" class="text-danger">Title looks good with 3 or more characters</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Description</label>
+            <textarea type="text" placeholder="What is the task about ??"  rows="10" class="form-control" formControlName="description" [class.is-invalid]="(registrationForm.get('description').invalid && registrationForm.get('description').touched)"> </textarea>
+            <div *ngIf="registrationForm.get('description').invalid && registrationForm.get('description').touched">
+                <small *ngIf="registrationForm.get('description').errors?.required" class="text-danger">More details about task would looks good!</small>
+            </div>
+        </div>
+
+        <button id="addTask" class="btn btn-md btn-primary" type="submit" [disabled] = "registrationForm.invalid">Add</button>
+        <button routerLink="/" class="btn btn-warning" style="margin-left: 10px;">Never Mind</button>
+    </form>
+</div>

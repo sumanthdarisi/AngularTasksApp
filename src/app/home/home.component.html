@@ -1,0 +1,16 @@
+
+<div class="cardsList">
+  <div  *ngFor="let card of cards" class="card">
+    <h5>{{card.header}}</h5>
+    <h6>{{card.description}}</h6>
+    <div class="x-button" (click) = remove(card)></div>
+  </div>
+
+  <div class="NoRecords" *ngIf="count">
+    Looks like no tasks added to your list. <br>Add one now.
+  </div>
+</div>
+
+<div class="newtask">
+  <button routerLink="/new" class="btn btn-primary btn-lg">Add Task</button>
+</div>

@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: 100%;
+    height: 70px;
+    background: rgb(25,75,80);
+    background: linear-gradient(225deg, rgba(25,75,80,1) 21%, rgba(0,212,255,1) 83%);
+}
+
+.cardsList{
+    max-width:500px;
+    margin: auto;
+}
+
+.NotedHeader{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    min-height: 70px;
+    background-color:white;
+    box-shadow: 4px 4px 10px -4px gray;
+    position: relative;
+    margin: 35px auto;
+    color: gray;
+    cursor: pointer;
+}
+
+.card h4,h5,h6{
+    padding: 5px 5px 0px 5px;
+}
+
+.card:hover .x-button{
+    position: absolute;
+    float: right;
+    top: 10px;
+    right: 10px;
+    border-radius: 20px;
+    width: 28px;
+    height: 28px;
+    background-color: lightcoral;
+    box-shadow: 4px 4px 10px -4px gray;
+    color: white;
+    background-position: center;
+}
+
+.newtask{
+    position: fixed;
+    float: right;
+    bottom: 25px;
+    right: 50px;
+    z-index: 998;
+}
+
+.newtask .btn{
+    text-align: center;
+}
+
+#addTask{
+    width: 200px;
+}
+
+.NoRecords{
+    width: 100%;
+    color: gray;
+    font-size: 23px;
+    text-align: center;
+    margin-top:50%;
+}
