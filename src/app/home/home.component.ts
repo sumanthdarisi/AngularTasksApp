@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit{
 
   ngOnInit(): void {
     this.cards = this.taskServ.getTasks();
-    if(this.cards.length >=1){
+    if(this.cards.length >0){
       this.count = false; // >0
     }
     console.log(this.count);
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit{
   {
     this.taskServ.remove(card);
     setTimeout(() => {
-      if(this.cards.length <= 1){
+      if(this.cards.length < 1){
         this.count = true; // >0
       }  
     }, 500);
