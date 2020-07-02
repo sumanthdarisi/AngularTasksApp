@@ -51,6 +51,9 @@ body{
     box-shadow: 4px 4px 10px -4px gray;
     color: white;
     background-position: center;
+    content: 'X';
+    text-align: center;
+    padding: auto;
 }
 
 .newtask{
