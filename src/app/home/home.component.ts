@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit{
         this.count = true; // >0
       }  
     }, 500);
-    
+    this.filteredCards = this.cards;
   }
   
   filter(text: string){

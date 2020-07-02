@@ -1,7 +1,7 @@
 
 <div class="cardsList">
   <div class="filter">
-    <input class="form-control" id="filter" placeholder="Filter" #filterText (keyup)="filter($event.target.value)">
+    <input class="form-control" id="filter" placeholder="Search tasks...." #filterText (keyup)="filter($event.target.value)">
   </div>
   <div  *ngFor="let card of filteredCards" class="card">
     <h5>{{card.header}}</h5>
