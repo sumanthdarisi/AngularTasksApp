@@ -1,13 +1,19 @@
 
 <div class="cardsList">
-  <div  *ngFor="let card of cards" class="card">
+  <div class="filter">
+    <input class="form-control" id="filter" placeholder="Filter" #filterText (keyup)="filter($event.target.value)">
+  </div>
+  <div  *ngFor="let card of filteredCards" class="card">
     <h5>{{card.header}}</h5>
     <h6>{{card.description}}</h6>
     <div class="x-button" (click) = remove(card)></div>
   </div>
 
   <div class="NoRecords" *ngIf="count">
-    Looks like no tasks added to your list. <br>Add one now.
+    Looks like no tasks added to your list. <br>Add a new task now.
+    <div class="alert alert-success" role="alert">
+      Note: Refreshing the page would wipe out all your tasks!
+    </div>
   </div>
 </div>
 

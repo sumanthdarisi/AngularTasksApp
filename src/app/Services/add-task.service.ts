@@ -44,4 +44,10 @@ export class AddTaskService {
     return this.tasks[id];
   }
 
+  update(id: number,title: string, description: string ){
+    let task = this.tasks[id];
+    task.header = title;
+    task.description = description;
+  }
+
 }

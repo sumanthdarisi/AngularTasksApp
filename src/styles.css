@@ -39,6 +39,10 @@ body{
     padding: 5px 5px 0px 5px;
 }
 
+.card h5{
+    color: indianred;
+}
+
 .card:hover .x-button{
     position: absolute;
     float: right;
@@ -76,4 +80,15 @@ body{
     font-size: 23px;
     text-align: center;
     margin-top:50%;
+}
+
+.NoRecords .alert{
+    top: 30px;
+    font-size: 15px;
+    margin: auto;
+}
+
+#filter{
+    margin-top: 20px;
+    color: lightslategray;
 }
